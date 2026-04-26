@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maze Solver</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="page-shell">
+        <div class="app-card">
+            <div class="hero-panel">
+                <div>
+                    <h1>Maze Solver</h1>
+                    <p>Enter your maze as rows of 0 (open) and 1 (wall). Watch the solver animate the solution.</p>
+                </div>
+            </div>
+            <div class="content-grid">
+                <div class="input-card">
+                    <label for="maze-input">Maze Input</label>
+                    <textarea id="maze-input" rows="45" cols="50">0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0 1 0 1 0 1 1 1 1 1 0 1 1 1 1 1 1 1 1 1 0
+0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0
+0 1 1 1 1 1 1 1 0 1 1 1 1 0 1 1 1 1 0 1 0
+0 0 0 0 0 0 0 1 0 0 0 0 1 0 0 0 0 0 0 1 0
+0 1 1 1 1 1 0 1 1 1 1 0 1 1 1 1 1 1 1 1 0
+0 0 0 0 0 1 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0
+0 1 1 1 0 1 1 1 1 0 1 0 1 1 1 1 1 1 1 1 0
+0 0 0 1 0 0 0 0 1 0 1 0 0 0 0 0 0 0 0 1 0
+0 1 0 1 1 1 1 0 1 0 1 1 1 1 1 1 1 1 0 1 0
+0 1 0 0 0 0 1 0 1 0 0 0 0 0 0 0 0 1 0 1 0
+0 1 1 1 1 0 1 0 1 1 1 1 1 0 1 1 0 1 0 1 0
+0 0 0 0 1 0 0 0 0 0 0 0 1 0 0 1 0 1 0 0 0
+0 1 1 0 1 1 1 1 1 1 1 0 1 0 1 1 0 1 1 1 0
+0 0 1 0 0 0 0 0 0 0 1 0 1 0 0 0 0 0 0 1 0
+0 1 1 1 1 1 1 0 1 0 1 1 1 1 1 1 1 1 0 1 0
+0 0 0 0 0 0 1 0 1 0 0 0 0 0 0 0 0 1 0 1 0
+0 1 1 1 1 0 1 0 1 1 1 1 1 1 1 1 0 1 0 1 0
+0 0 0 0 1 0 1 0 0 0 0 0 0 0 0 1 0 1 0 1 0
+0 1 1 0 1 0 1 1 1 1 1 1 1 1 0 1 0 1 0 1 0
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0</textarea>
+                    <div class="button-row">
+    <button id="solve-btn" class="primary-btn">Solve Maze</button>
+    <button id="mute-btn" class="icon-btn">🔊</button>
+</div>
+
+<div id="status-text" class="status-text"></div>
+                </div>
+                <div class="visual-card">
+                    <div class="canvas-wrap">
+                        <canvas id="maze-canvas" width="600" height="600"></canvas>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>node server.js
