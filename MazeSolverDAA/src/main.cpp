@@ -10,9 +10,16 @@ using namespace std;
 int main() {
 
     srand(time(0));
-auto mazes = readAllMazes("MazeSolver/MazeSolverDAA/data/maze.txt");
 
-    if (mazes.empty()) return 0;
+    //  CORRECT PATH
+    auto mazes = readAllMazes("data/maze.txt");
+
+    //  HANDLE EMPTY SAFELY
+    if (mazes.empty()) {
+        cout << "0 0\n";
+        cout << "PATH\n";
+        return 0;
+    }
 
     int index = rand() % mazes.size();
     auto maze = mazes[index];
@@ -24,7 +31,7 @@ auto mazes = readAllMazes("MazeSolver/MazeSolverDAA/data/maze.txt");
 
     bool ok = solveRegion(maze, 0, n-1, 0, m-1, {0,0}, {n-1,m-1}, path);
 
-    // ✅ ALWAYS PRINT (even if empty)
+    //  ALWAYS PRINT
     cout << n << " " << m << "\n";
 
     for (auto &row : maze) {
